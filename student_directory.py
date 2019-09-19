@@ -42,10 +42,3 @@ class StudentDirectory:
             if int(self.student_dict[student]['enter_year']) == enter_year:
                 student_list.append(student)
         return student_list
-
-students = {}
-
-with open('/Users/jzpan/students.json', 'r') as f:
-    students = json.load(f)
-directory = StudentDirectory(students)
-print(directory.search_by_name('', 'Chan'))
